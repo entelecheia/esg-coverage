@@ -1,0 +1,40 @@
+# Changes here will be overwritten by Copier; do NOT edit manually
+_commit: v0.8.0
+_src_path: gh:entelecheia/hyperfast-python-template
+author: Young Joon Lee
+build_and_release: true
+code_template_answers_file: .copier-hyfi-config.yaml
+code_template_source: ''
+copyright_year: 2023
+documentaion_tool: jupyter-book
+documentation_url: https://esg-coverage.entelecheia.ai
+email: entelecheia@hotmail.com
+favicon_path: https://assets.entelecheia.ai/favicon.png
+friendly_name: The Analyst Pathway in ESG
+github_repo_name: esg-coverage
+github_username: entelecheia
+google_analytics_id: G-Q1HTTH4YZ2
+logo_path: ''
+package_name: esgcov
+project_description: This study investigates the role of financial analysts in disseminating
+    Environmental, Social, and Governance (ESG) information to the market and its
+    subsequent impact on stock performance. While the direct causal relationship between
+    ESG ratings and analyst coverage remains unclear, we propose that analysts serve
+    as an informational pathway, translating ESG ratings into stock performance. Using
+    panel data analysis, we examine the relationship between ESG ratings, analyst
+    coverage, and stock performance. Our findings suggest that companies with higher
+    ESG ratings do not necessarily attract more analyst coverage, but the coverage
+    they receive plays a crucial role in shaping investor perceptions and influencing
+    stock performance. This research highlights the importance of financial analysts
+    in the ESG ecosystem and underscores the need for more comprehensive and accurate
+    coverage of ESG topics. Our findings have implications for companies, investors,
+    and policymakers interested in sustainable investing and corporate social responsibility.
+project_license: MIT
+project_name: esg-coverage
+project_short_description: The Role of Analyst Coverage in Translating ESG Ratings
+    into Stock Performance
+upload_to_release: true
+upload_to_repository: true
+use_launch_buttons: true
+use_source_code_skeleton: true
+
