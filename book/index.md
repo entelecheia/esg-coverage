@@ -7,6 +7,8 @@
 [![jupyter-book-image]][docs-url]
 
 <!-- Links: -->
+[hyperfast python template]: https://github.com/entelecheia/hyperfast-python-template
+
 [pypi-image]: https://img.shields.io/pypi/v/esg-coverage
 [license-image]: https://img.shields.io/github/license/entelecheia/esg-coverage
 [license-url]: https://github.com/entelecheia/esg-coverage/blob/main/LICENSE
@@ -41,3 +43,8 @@ Contributions are welcome! Please see the [contributing guidelines] for more inf
 ## License
 
 This project is released under the [MIT License][license-url].
+
+## Table of Contents
+
+```{tableofcontents}
+```
