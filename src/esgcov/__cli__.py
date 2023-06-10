@@ -1,14 +1,15 @@
 """Command line interface for esgcov"""
 
 # Importing the libraries
+import sys
 
-from . import __version__
+from hyfi import about, hydra_main
 
 
 def main() -> None:
-    """This is the cli function of the package"""
-    print("This is the cli function of the package")
-    print(f"The version of the package is: {__version__}")
+    """Main function for the CLI"""
+    sys.argv.append(f"--config-path={about.config_path}")
+    hydra_main()
 
 
 if __name__ == "__main__":
