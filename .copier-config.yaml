@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; do NOT edit manually
-_commit: v0.8.1
+_commit: v0.8.7
 _src_path: gh:entelecheia/hyperfast-python-template
 author: Young Joon Lee
 build_and_release: true
@@ -15,6 +15,7 @@ github_repo_name: esg-coverage
 github_username: entelecheia
 google_analytics_id: G-Q1HTTH4YZ2
 logo_path: ''
+main_branch: main
 package_name: esgcov
 project_description: This study investigates the role of financial analysts in disseminating
     Environmental, Social, and Governance (ESG) information to the market and its
