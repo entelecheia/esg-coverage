@@ -1,0 +1,6 @@
+# Changes here will be overwritten by Copier; do NOT edit manually
+_commit: v0.3.12
+_src_path: gh:entelecheia/hyfi-template
+package_name: esgcov
+project_name: esg-coverage
+

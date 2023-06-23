@@ -1,3 +1,5 @@
+workspace/
+
 # hypothesis: https://github.com/HypothesisWorks/hypothesis
 .hypothesis/
 .vscode/
@@ -7,6 +9,7 @@ node_modules/
 
 # Jupyter Notebook
 _build/
+_autosummary/
 
 # Python
 *.py[cod]

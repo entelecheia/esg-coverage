@@ -1,0 +1,16 @@
+batch_name: ${oc.select:..batch_name,demo-batch}
+batch_num:
+batch_root: ${oc.select:..path.batch_outputs,tmp/batch-outputs/${.batch_name}}
+output_suffix:
+output_extention:
+random_seed: true
+seed: -1
+resume_run: false
+resume_latest: false
+device: cpu
+num_devices: 1
+num_workers: ${oc.select:..project.num_workers,1}
+config_yaml: config.yaml
+config_json: config.json
+config_dirname: configs
+verbose: ${oc.select:..project.verbose,false}

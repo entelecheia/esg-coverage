@@ -4,9 +4,12 @@
 [![version-image]][release-url]
 [![release-date-image]][release-url]
 [![license-image]][license-url]
+[![codecov][codecov-image]][codecov-url]
 [![jupyter-book-image]][docs-url]
 
 <!-- Links: -->
+[codecov-image]: https://codecov.io/gh/entelecheia/esg-coverage/branch/main/graph/badge.svg?token=FL2N6C7KFP
+[codecov-url]: https://codecov.io/gh/entelecheia/esg-coverage
 [pypi-image]: https://img.shields.io/pypi/v/esg-coverage
 [license-image]: https://img.shields.io/github/license/entelecheia/esg-coverage
 [license-url]: https://github.com/entelecheia/esg-coverage/blob/main/LICENSE
