@@ -4,5 +4,12 @@
 format: jb-book
 root: index
 chapters:
-- file: usage
-- file: examples
+  - file: paper/introduction/index
+  - file: paper/introduction/literature
+  - file: paper/introduction/methodology
+  # - file: paper/introduction/implementation
+  - file: paper/introduction/results
+  - file: paper/introduction/conclusion
+  - file: supplementary/index
+    sections:
+      - file: supplementary/datasets
