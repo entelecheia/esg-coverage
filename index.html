@@ -89,7 +89,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="https://assets.entelecheia.ai/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="next" title="Introduction" href="paper/introduction/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,8 +175,11 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paper/introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="supplementary/index.html">Supplemental material</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="supplementary/datasets.html">Prepare data</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -387,9 +390,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog">Changelog</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
 </ul>
             </nav>
@@ -408,6 +408,7 @@ document.write(`
 <a class="reference external" href="https://github.com/entelecheia/esg-coverage/releases"><img alt="version-image" src="https://img.shields.io/github/v/release/entelecheia/esg-coverage?sort=semver" /></a>
 <a class="reference external" href="https://github.com/entelecheia/esg-coverage/releases"><img alt="release-date-image" src="https://img.shields.io/github/release-date/entelecheia/esg-coverage" /></a>
 <a class="reference external" href="https://github.com/entelecheia/esg-coverage/blob/main/LICENSE"><img alt="license-image" src="https://img.shields.io/github/license/entelecheia/esg-coverage" /></a>
+<a class="reference external" href="https://codecov.io/gh/entelecheia/esg-coverage"><img alt="codecov" src="https://codecov.io/gh/entelecheia/esg-coverage/branch/main/graph/badge.svg?token=FL2N6C7KFP" /></a>
 <a class="reference external" href="https://esg-coverage.entelecheia.ai"><img alt="jupyter-book-image" src="https://jupyterbook.org/en/stable/_images/badge.svg" /></a></p>
 <!-- Links: -->
 <!-- Links: -->
@@ -418,24 +419,12 @@ document.write(`
 <li><p>PyPI: <a class="reference external" href="https://pypi.org/project/esg-coverage">https://pypi.org/project/esg-coverage</a></p></li>
 </ul>
 <p>This study investigates the role of financial analysts in disseminating Environmental, Social, and Governance (ESG) information to the market and its subsequent impact on stock performance. While the direct causal relationship between ESG ratings and analyst coverage remains unclear, we propose that analysts serve as an informational pathway, translating ESG ratings into stock performance. Using panel data analysis, we examine the relationship between ESG ratings, analyst coverage, and stock performance. Our findings suggest that companies with higher ESG ratings do not necessarily attract more analyst coverage, but the coverage they receive plays a crucial role in shaping investor perceptions and influencing stock performance. This research highlights the importance of financial analysts in the ESG ecosystem and underscores the need for more comprehensive and accurate coverage of ESG topics. Our findings have implications for companies, investors, and policymakers interested in sustainable investing and corporate social responsibility.</p>
-<section id="changelog">
-<h2>Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading">#</a></h2>
-<p>See the <a class="reference external" href="https://github.com/entelecheia/esg-coverage/blob/main/CHANGELOG.md">CHANGELOG</a> for more information.</p>
-</section>
-<section id="contributing">
-<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">#</a></h2>
-<p>Contributions are welcome! Please see the <a class="reference external" href="https://github.com/entelecheia/esg-coverage/blob/main/CONTRIBUTING.md">contributing guidelines</a> for more information.</p>
-</section>
-<section id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this heading">#</a></h2>
-<p>This project is released under the <a class="reference external" href="https://github.com/entelecheia/esg-coverage/blob/main/LICENSE">MIT License</a>.</p>
-</section>
 <section id="table-of-contents">
 <h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paper/introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supplementary/index.html">Supplemental material</a></li>
 </ul>
 </div>
 </section>
@@ -473,11 +462,11 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
-       href="usage.html"
+       href="paper/introduction/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Usage</p>
+        <p class="prev-next-title">Introduction</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -499,9 +488,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog">Changelog</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
 </ul>
   </nav></div>

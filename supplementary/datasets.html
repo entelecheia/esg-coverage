@@ -1,0 +1,1192 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Prepare data &#8212; The Analyst Pathway in ESG</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/js/hoverxref.js"></script>
+    <script src="../_static/js/tooltipster.bundle.min.js"></script>
+    <script src="../_static/js/micromodal.min.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-Q1HTTH4YZ2"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-Q1HTTH4YZ2');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'supplementary/datasets';</script>
+    <link rel="shortcut icon" href="https://assets.entelecheia.ai/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Supplemental material" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">The Analyst Pathway in ESG</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    The Analyst Pathway in ESG
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../paper/introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Supplemental material</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Prepare data</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/entelecheia/esg-coverage/blob/main/book/supplementary/datasets.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/entelecheia/esg-coverage" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/entelecheia/esg-coverage/edit/main/book/supplementary/datasets.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/entelecheia/esg-coverage/issues/new?title=Issue%20on%20page%20%2Fsupplementary/datasets.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/supplementary/datasets.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Prepare data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esg-ratings-dataset">ESG Ratings Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esg-coverage-dataset">ESG Coverage Dataset</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="prepare-data">
+<h1>Prepare data<a class="headerlink" href="#prepare-data" title="Permalink to this heading">#</a></h1>
+<section id="esg-ratings-dataset">
+<h2>ESG Ratings Dataset<a class="headerlink" href="#esg-ratings-dataset" title="Permalink to this heading">#</a></h2>
+<p><strong>ESG Ratings Dataset Description</strong></p>
+<p>The ESG ratings dataset contains environmental, social, and governance (ESG) ratings for various companies from 2011 to 2020.</p>
+<p><strong>Structure</strong></p>
+<p>The original dataset is a structured CSV file with columns:</p>
+<ul class="simple">
+<li><p>‘type’: the type of the rating (ESG, E, S, or G).</p></li>
+<li><p>‘code’: a unique identifier for the company (‘A’ followed by 6 digits).</p></li>
+<li><p>‘name’: the name of the company.</p></li>
+<li><p>‘market’: a category indicating the market in which the company operates (0 for Others, 1 for KOSPI, 2 for KOSDAQ).</p></li>
+<li><p>‘2011’ to ‘2020’: the ESG ratings for each year.</p></li>
+</ul>
+<p>The ratings range from ‘A+’ (best) to ‘D’ (worst), and missing ratings are denoted as ‘nan’.</p>
+<p>Sample data:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-right head"><p></p></th>
+<th class="text-left head"><p>type</p></th>
+<th class="text-left head"><p>code</p></th>
+<th class="text-left head"><p>name</p></th>
+<th class="text-right head"><p>market</p></th>
+<th class="text-left head"><p>2011</p></th>
+<th class="text-left head"><p>2012</p></th>
+<th class="text-left head"><p>2013</p></th>
+<th class="text-left head"><p>2014</p></th>
+<th class="text-left head"><p>2015</p></th>
+<th class="text-left head"><p>2016</p></th>
+<th class="text-left head"><p>2017</p></th>
+<th class="text-left head"><p>2018</p></th>
+<th class="text-left head"><p>2019</p></th>
+<th class="text-left head"><p>2020</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>0</p></td>
+<td class="text-left"><p>ESG</p></td>
+<td class="text-left"><p>A000010</p></td>
+<td class="text-left"><p>신한은행</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>1</p></td>
+<td class="text-left"><p>ESG</p></td>
+<td class="text-left"><p>A000020</p></td>
+<td class="text-left"><p>동화약품</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>B</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>2</p></td>
+<td class="text-left"><p>ESG</p></td>
+<td class="text-left"><p>A000030</p></td>
+<td class="text-left"><p>우리은행</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>B+</p></td>
+<td class="text-left"><p>B+</p></td>
+<td class="text-left"><p>B+</p></td>
+<td class="text-left"><p>B+</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>nan</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>3</p></td>
+<td class="text-left"><p>ESG</p></td>
+<td class="text-left"><p>A000040</p></td>
+<td class="text-left"><p>KR모터스</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>D</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>C</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>4</p></td>
+<td class="text-left"><p>ESG</p></td>
+<td class="text-left"><p>A000050</p></td>
+<td class="text-left"><p>경방</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p>nan</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>B</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>C</p></td>
+<td class="text-left"><p>C</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conversion Procedure</strong></p>
+<p>The dataset was transformed for further analysis using the following procedure:</p>
+<ol class="arabic simple">
+<li><p>The ratings (‘A+’, ‘A’, ‘B+’, ‘B’, ‘C’, ‘D’, and ‘nan’) were first mapped to numerical scores (6, 5, 4, 3, 2, 1, and NaN respectively) for easy comparison.</p></li>
+<li><p>The DataFrame was reshaped (“melted”) to convert the year columns into rows, resulting in a DataFrame with ‘year’ and ‘rating_score’ columns. This makes the DataFrame longer but less wide, and puts it in a format that’s more convenient for many types of analysis.</p></li>
+<li><p>The ‘year’ column was converted to integer for correct chronological order sorting.</p></li>
+<li><p>The DataFrame was sorted by ‘type’, ‘code’, and ‘year’ to ensure correct grouping and comparison for each type of rating, company, and year.</p></li>
+<li><p>The ‘rating_change’ column was calculated by finding the difference in rating scores for each group of ‘type’ and ‘code’. The resulting values indicate the direction and magnitude of change in the rating score from the previous year.</p></li>
+<li><p>The numerical scores in the ‘rating_score’ column were mapped back to their original ratings (‘A+’, ‘A’, ‘B+’, ‘B’, ‘C’, ‘D’, and ‘nan’) to create a new ‘rating’ column.</p></li>
+<li><p>The ‘rating_change’ values were adjusted to indicate the direction of change: ‘1’ if the rating improved from the previous year, ‘0’ if it stayed the same, ‘-1’ if it worsened, and ‘nan’ if the rating was not available in either the previous year or the current year.</p></li>
+</ol>
+<p>The resulting dataset contains the original ESG ratings along with additional columns for the numerical rating scores and the direction of rating change, allowing for more detailed and flexible analysis of the ESG performance of companies over time.</p>
+<p>Convert ratings column 2011 ~ 2022 to rows with <code class="docutils literal notranslate"><span class="pre">year</span></code> column and <code class="docutils literal notranslate"><span class="pre">rating</span></code> column.
+Also, add rating_change column. It is the direction of rating change. <code class="docutils literal notranslate"><span class="pre">1</span></code> means up, <code class="docutils literal notranslate"><span class="pre">0</span></code> means same, <code class="docutils literal notranslate"><span class="pre">-1</span></code> means down.</p>
+<p>Converted data is saved as <code class="docutils literal notranslate"><span class="pre">ESG_ratings_processed.parquet</span></code>.</p>
+<p>Sample data:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-right head"><p></p></th>
+<th class="text-left head"><p>type</p></th>
+<th class="text-left head"><p>code</p></th>
+<th class="text-left head"><p>name</p></th>
+<th class="text-right head"><p>market</p></th>
+<th class="text-right head"><p>year</p></th>
+<th class="text-right head"><p>rating_score</p></th>
+<th class="text-right head"><p>rating_change</p></th>
+<th class="text-left head"><p>rating</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>2263</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2011</p></td>
+<td class="text-right"><p>6</p></td>
+<td class="text-right"><p>nan</p></td>
+<td class="text-left"><p>A+</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>10139</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2012</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-right"><p>-1</p></td>
+<td class="text-left"><p>A</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>18015</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2013</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-left"><p>A</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>25891</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2014</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-left"><p>A</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>33767</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2015</p></td>
+<td class="text-right"><p>6</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p>A+</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>41643</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2016</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-right"><p>-1</p></td>
+<td class="text-left"><p>A</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>49519</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2017</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-left"><p>A</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>57395</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2018</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-left"><p>A</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>65271</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2019</p></td>
+<td class="text-right"><p>4</p></td>
+<td class="text-right"><p>-1</p></td>
+<td class="text-left"><p>B+</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>73147</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-left"><p>삼성전자</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2020</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p>A</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">esgcov</span> <span class="kn">import</span> <span class="n">HyFI</span>
+
+<span class="k">if</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">is_colab</span><span class="p">():</span>
+    <span class="n">HyFI</span><span class="o">.</span><span class="n">mount_google_drive</span><span class="p">()</span>
+
+<span class="n">ws</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_workspace</span><span class="p">(</span>
+    <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;esg-coverage&quot;</span><span class="p">,</span>
+    <span class="n">task_name</span><span class="o">=</span><span class="s2">&quot;datasets&quot;</span><span class="p">,</span>
+    <span class="n">project_root</span><span class="o">=</span><span class="n">HyFI</span><span class="o">.</span><span class="n">dotenv</span><span class="p">()</span><span class="o">.</span><span class="n">DOTENV_DIR</span> <span class="ow">or</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+    <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_workspace_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_workspace_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.notebooks:Google Colab not detected.
+INFO:hyfi.utils.notebooks:Extension autotime not found. Install it first.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage
+project_workspace_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Load your dataframe</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">project_datasets</span>
+<span class="n">ratings_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span><span class="s2">&quot;raw/ESG_ratings_raw.csv&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">)</span>
+
+<span class="c1"># Define a mapping from ratings to numerical scores</span>
+<span class="n">rating_map</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A+&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;B+&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">}</span>
+
+<span class="c1"># Convert rating columns into numerical scores</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2021</span><span class="p">):</span>
+    <span class="n">ratings_df</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)]</span> <span class="o">=</span> <span class="n">ratings_df</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">rating_map</span><span class="p">)</span>
+
+<span class="c1"># Melt dataframe to have years as rows instead of columns</span>
+<span class="n">melted_df</span> <span class="o">=</span> <span class="n">ratings_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span>
+    <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;market&quot;</span><span class="p">],</span>
+    <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span>
+    <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;rating_score&quot;</span><span class="p">,</span>
+    <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)],</span>
+<span class="p">)</span>
+
+<span class="c1"># Convert year to integer</span>
+<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># Sort by type, code and year</span>
+<span class="n">melted_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Calculate rating change</span>
+<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating_change&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">])[</span><span class="s2">&quot;rating_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+
+<span class="c1"># Create &#39;rating&#39; column by mapping numerical scores back to ratings</span>
+<span class="n">reverse_rating_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">rating_map</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">reverse_rating_map</span><span class="p">)</span>
+
+<span class="c1"># Set rating_change values to &#39;1&#39;, &#39;0&#39;, &#39;-1&#39; based on whether it&#39;s positive, zero or negative</span>
+<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating_change&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating_change&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">(</span><span class="mi">0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">))</span>
+<span class="p">)</span>
+
+<span class="n">HyFI</span><span class="o">.</span><span class="n">save_dataframes</span><span class="p">(</span><span class="n">melted_df</span><span class="p">,</span> <span class="s2">&quot;processed/ESG_ratings_raw.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">)</span>
+<span class="n">ratings_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span><span class="s2">&quot;processed/ESG_ratings_raw.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="n">ratings_df</span><span class="p">[</span><span class="n">ratings_df</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="s2">&quot;A005930&quot;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">to_markdown</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.datasets:Saving dataframe to /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace/datasets/processed/ESG_ratings_raw.parquet
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|       | type   | code    | name     |   market |   year |   rating_score |   rating_change | rating   |
+|------:|:-------|:--------|:---------|---------:|-------:|---------------:|----------------:|:---------|
+|  2263 | E      | A005930 | 삼성전자 |        1 |   2011 |              6 |             nan | A+       |
+| 10139 | E      | A005930 | 삼성전자 |        1 |   2012 |              5 |              -1 | A        |
+| 18015 | E      | A005930 | 삼성전자 |        1 |   2013 |              5 |               0 | A        |
+| 25891 | E      | A005930 | 삼성전자 |        1 |   2014 |              5 |               0 | A        |
+| 33767 | E      | A005930 | 삼성전자 |        1 |   2015 |              6 |               1 | A+       |
+| 41643 | E      | A005930 | 삼성전자 |        1 |   2016 |              5 |              -1 | A        |
+| 49519 | E      | A005930 | 삼성전자 |        1 |   2017 |              5 |               0 | A        |
+| 57395 | E      | A005930 | 삼성전자 |        1 |   2018 |              5 |               0 | A        |
+| 65271 | E      | A005930 | 삼성전자 |        1 |   2019 |              4 |              -1 | B+       |
+| 73147 | E      | A005930 | 삼성전자 |        1 |   2020 |              5 |               1 | A        |
+</pre></div>
+</div>
+</div>
+</div>
+<section id="esg-coverage-dataset">
+<h3>ESG Coverage Dataset<a class="headerlink" href="#esg-coverage-dataset" title="Permalink to this heading">#</a></h3>
+<p><strong>ESG Coverage Dataset Description</strong></p>
+<p>The ESG coverage dataset provides data on the topic weights of different environmental, social, and governance (ESG) topics for various companies over the years. Specifically, it has the following columns:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: a string representing the unique identifier of a company.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code>: the year for which the topic weights are provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_num</span></code>: a string representing the topic number, ranging from ‘topic0’ to ‘topic35’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_weight</span></code>: a float representing the weight of a specific topic for a given company in a given year.</p></li>
+</ul>
+<p>Sample data:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-right head"><p></p></th>
+<th class="text-left head"><p>code</p></th>
+<th class="text-right head"><p>year</p></th>
+<th class="text-left head"><p>topic_num</p></th>
+<th class="text-right head"><p>topic_weight</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>0</p></td>
+<td class="text-left"><p>A000070</p></td>
+<td class="text-right"><p>2003</p></td>
+<td class="text-left"><p>topic0</p></td>
+<td class="text-right"><p>1.86484e-05</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>1</p></td>
+<td class="text-left"><p>A000070</p></td>
+<td class="text-right"><p>2003</p></td>
+<td class="text-left"><p>topic1</p></td>
+<td class="text-right"><p>9.6384e-05</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>2</p></td>
+<td class="text-left"><p>A000070</p></td>
+<td class="text-right"><p>2003</p></td>
+<td class="text-left"><p>topic10</p></td>
+<td class="text-right"><p>2.59255e-05</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>3</p></td>
+<td class="text-left"><p>A000070</p></td>
+<td class="text-right"><p>2003</p></td>
+<td class="text-left"><p>topic11</p></td>
+<td class="text-right"><p>3.35297e-05</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>4</p></td>
+<td class="text-left"><p>A000070</p></td>
+<td class="text-right"><p>2003</p></td>
+<td class="text-left"><p>topic12</p></td>
+<td class="text-right"><p>0.292819</p></td>
+</tr>
+</tbody>
+</table>
+<p>The conversion process reshapes and enriches this raw dataset to provide more insightful views of the ESG coverage. This process involves the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Pivot the DataFrame</strong>: The <code class="docutils literal notranslate"><span class="pre">pivot()</span></code> function is used to reshape the raw data, with <code class="docutils literal notranslate"><span class="pre">code</span></code> and <code class="docutils literal notranslate"><span class="pre">year</span></code> as the index, <code class="docutils literal notranslate"><span class="pre">topic_num</span></code> as the columns, and <code class="docutils literal notranslate"><span class="pre">topic_weight</span></code> as the values.</p></li>
+<li><p><strong>Create New Categories</strong>: New columns are added to represent the total topic weights for different ESG categories. These include:</p>
+<ul class="simple">
+<li><p>‘E’: the weight of ‘topic0’</p></li>
+<li><p>‘S’: the weight of ‘topic1’</p></li>
+<li><p>‘G’: the sum of the weights of ‘topic2’ and ‘topic6’</p></li>
+<li><p>‘G2’: the weight of ‘topic2’</p></li>
+<li><p>‘ESG’: the sum of the weights of ‘E’, ‘S’, and ‘G’</p></li>
+<li><p>‘ESG2’: the sum of the weights of ‘E’, ‘S’, and ‘G2’</p></li>
+</ul>
+</li>
+<li><p><strong>Melt the DataFrame</strong>: The DataFrame is then melted to reshape it again, turning the newly created categories into rows in a new ‘type’ column, with the corresponding topic weights listed in a ‘topic_weight’ column. Each row now represents the total topic weight for a specific ESG category, for a specific company in a given year.</p></li>
+<li><p><strong>Calculate Yearly Changes</strong>: For each company and each ESG category, the year-on-year changes in ‘topic_weight’ are calculated.</p></li>
+<li><p><strong>Calculate Coverage Change</strong>: Based on the yearly changes, a new ‘coverage_change’ column is created. If the change in ‘topic_weight’ is greater than 0.1 standard deviations, ‘coverage_change’ is set to 1. If it is less than -0.1 standard deviations, it is set to -1. Otherwise, it is set to 0. If data for the previous year does not exist or is NaN, ‘coverage_change’ is set to NaN.</p></li>
+</ol>
+<p>The converted ESG coverage dataset is now in a format that allows for more detailed analysis and comparison with the ESG ratings. It provides an overview of the emphasis placed on different ESG topics by each company over time, as well as the yearly changes in these topic weights.</p>
+<p>Converted data is saved as <code class="docutils literal notranslate"><span class="pre">ESG_coverage_processed.parquet</span></code>.</p>
+<p>Sample data:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-right head"><p></p></th>
+<th class="text-left head"><p>code</p></th>
+<th class="text-right head"><p>year</p></th>
+<th class="text-left head"><p>type</p></th>
+<th class="text-right head"><p>topic_weight</p></th>
+<th class="text-right head"><p>yearly_change</p></th>
+<th class="text-right head"><p>coverage_change</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>412</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2011</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>0.00133423</p></td>
+<td class="text-right"><p>nan</p></td>
+<td class="text-right"><p>nan</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>413</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2012</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>7.16375e-05</p></td>
+<td class="text-right"><p>-0.00126259</p></td>
+<td class="text-right"><p>-1</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>414</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2013</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>0.000591296</p></td>
+<td class="text-right"><p>0.000519659</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>415</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2014</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>0.000554041</p></td>
+<td class="text-right"><p>-3.72556e-05</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>416</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2015</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>0.000238747</p></td>
+<td class="text-right"><p>-0.000315294</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>417</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2016</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>0.000624334</p></td>
+<td class="text-right"><p>0.000385587</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>418</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2017</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>0.000190126</p></td>
+<td class="text-right"><p>-0.000434208</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>419</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2018</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>0.000252869</p></td>
+<td class="text-right"><p>6.27427e-05</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>420</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2019</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>0.0004799</p></td>
+<td class="text-right"><p>0.000227031</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>421</p></td>
+<td class="text-left"><p>A005930</p></td>
+<td class="text-right"><p>2020</p></td>
+<td class="text-left"><p>E</p></td>
+<td class="text-right"><p>0.00112099</p></td>
+<td class="text-right"><p>0.000641088</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># load the dataframe</span>
+<span class="n">coverage_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span><span class="s2">&quot;raw/ESG_coverage_raw.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">)</span>
+
+<span class="n">coverage_df</span> <span class="o">=</span> <span class="n">coverage_df</span><span class="p">[</span><span class="n">coverage_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2011</span><span class="p">]</span>
+
+<span class="c1"># Pivot the dataframe</span>
+<span class="n">pivot_df</span> <span class="o">=</span> <span class="n">coverage_df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;topic_num&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;topic_weight&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Fill na values with 0</span>
+<span class="n">pivot_df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Define new categories</span>
+<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic0&quot;</span><span class="p">]</span>
+<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic1&quot;</span><span class="p">]</span>
+<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic2&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic6&quot;</span><span class="p">]</span>
+<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;G2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic2&quot;</span><span class="p">]</span>
+<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;ESG&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span>
+<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;ESG2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;G2&quot;</span><span class="p">]</span>
+
+<span class="c1"># Reset the column name</span>
+<span class="n">pivot_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Melt the dataframe to have types as rows instead of columns</span>
+<span class="n">melted_df</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span>
+    <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">],</span>
+    <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+    <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;topic_weight&quot;</span><span class="p">,</span>
+    <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;G2&quot;</span><span class="p">,</span> <span class="s2">&quot;ESG&quot;</span><span class="p">,</span> <span class="s2">&quot;ESG2&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># Calculate yearly changes in &#39;topic_weight&#39; for each company and type</span>
+<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">])[</span><span class="s2">&quot;topic_weight&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+
+<span class="c1"># Calculate standard deviation of the yearly changes for each type</span>
+<span class="n">type_std_devs</span> <span class="o">=</span> <span class="n">melted_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="c1"># Initialize &#39;coverage_change&#39; to NaN where &#39;yearly_change&#39; is NaN</span>
+<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;coverage_change&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">(),</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Update &#39;coverage_change&#39; based on &#39;yearly_change&#39; relative to the standard deviation for the type</span>
+<span class="k">for</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">type_std_devs</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="n">std_dev</span> <span class="o">=</span> <span class="n">type_std_devs</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span>
+    <span class="n">type_mask</span> <span class="o">=</span> <span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">type</span>
+    <span class="n">melted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+        <span class="n">type_mask</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">std_dev</span><span class="p">),</span> <span class="s2">&quot;coverage_change&quot;</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">melted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+        <span class="n">type_mask</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">std_dev</span><span class="p">),</span> <span class="s2">&quot;coverage_change&quot;</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">HyFI</span><span class="o">.</span><span class="n">save_dataframes</span><span class="p">(</span>
+    <span class="n">melted_df</span><span class="p">,</span> <span class="s2">&quot;processed/ESG_coverage_processed.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span>
+<span class="p">)</span>
+<span class="n">coverage_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span>
+    <span class="s2">&quot;processed/ESG_coverage_processed.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="n">coverage_df</span><span class="p">[</span><span class="n">coverage_df</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="s2">&quot;A005930&quot;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">to_markdown</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.datasets:Saving dataframe to /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace/datasets/processed/ESG_coverage_processed.parquet
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|     | code    |   year | type   |   topic_weight |   yearly_change |   coverage_change |
+|----:|:--------|-------:|:-------|---------------:|----------------:|------------------:|
+| 412 | A005930 |   2011 | E      |    0.00133423  |   nan           |               nan |
+| 413 | A005930 |   2012 | E      |    7.16375e-05 |    -0.00126259  |                 0 |
+| 414 | A005930 |   2013 | E      |    0.000591296 |     0.000519659 |                 0 |
+| 415 | A005930 |   2014 | E      |    0.000554041 |    -3.72556e-05 |                 0 |
+| 416 | A005930 |   2015 | E      |    0.000238747 |    -0.000315294 |                 0 |
+| 417 | A005930 |   2016 | E      |    0.000624334 |     0.000385587 |                 0 |
+| 418 | A005930 |   2017 | E      |    0.000190126 |    -0.000434208 |                 0 |
+| 419 | A005930 |   2018 | E      |    0.000252869 |     6.27427e-05 |                 0 |
+| 420 | A005930 |   2019 | E      |    0.0004799   |     0.000227031 |                 0 |
+| 421 | A005930 |   2020 | E      |    0.00112099  |     0.000641088 |                 0 |
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "entelecheia/esg-coverage",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./supplementary"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Supplemental material</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esg-ratings-dataset">ESG Ratings Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esg-coverage-dataset">ESG Coverage Dataset</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Young Joon Lee
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
