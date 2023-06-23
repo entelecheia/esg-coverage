@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "esg-coverage"
-version = "0.1.0"
+version = "0.2.0"
 description = "The Role of Analyst Coverage in Translating ESG Ratings into Stock Performance"
 authors = ["Young Joon Lee <entelecheia@hotmail.com>"]
 license = "MIT"
