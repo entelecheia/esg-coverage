@@ -1,7 +1,4 @@
 defaults:
-  - __default__
+  - __task__
 
-batch_name: ${oc.select:..batch.batch_name, demo}
-verbose: ${oc.select:..batch.verbose, false}
-
-batch_dir: ${.output_dir}/${.batch_name}
+batch_outputs: ${.task_outputs}/${oc.select:..batch_name,batch-outputs}
