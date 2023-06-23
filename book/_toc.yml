@@ -5,11 +5,11 @@ format: jb-book
 root: index
 chapters:
   - file: paper/introduction/index
-  - file: paper/introduction/literature
-  - file: paper/introduction/methodology
-  # - file: paper/introduction/implementation
-  - file: paper/introduction/results
-  - file: paper/introduction/conclusion
+  - file: paper/literature/index
+  - file: paper/methodology/index
+  # - file: paper/implementation/index
+  - file: paper/results/index
+  - file: paper/conclusion/index
   - file: supplementary/index
     sections:
       - file: supplementary/datasets
