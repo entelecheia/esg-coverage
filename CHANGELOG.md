@@ -1,5 +1,15 @@
 <!--next-version-placeholder-->
 
+## v0.2.1 (2023-06-26)
+
+### Fix
+
+* **dependencies:** Upgrade hyfi to version 0.14.1. ([`0c833de`](https://github.com/entelecheia/esg-coverage/commit/0c833deb3052bc103f121424047956757ee3790f))
+
+### Documentation
+
+* Update structure ([`04d2ba3`](https://github.com/entelecheia/esg-coverage/commit/04d2ba358a7b80c05a2bff02e5d2ad331ccec3dc))
+
 ## v0.2.0 (2023-06-23)
 
 ### Feature
