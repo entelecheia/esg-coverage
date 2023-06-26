@@ -1,0 +1,27 @@
+defaults:
+  - __init__
+  - /pipe@pipe1: load_dataframes
+  - /pipe@pipe2: preprocessing_esg_ratings
+  - /pipe@pipe3: save_dataframes
+  - /pipe@pipe4: preprocessing_esg_coverage
+
+steps:
+  - uses: pipe1
+    with:
+      data_files: https://assets.entelecheia.ai/datasets/esg_coverage/ESG_ratings_raw.csv
+  - uses: pipe2
+    verbose: true
+  - uses: pipe3
+    with:
+      data_file: processed/ESG_ratings_processed.parquet
+    verbose: true
+  - uses: pipe1
+    with:
+      data_files: https://assets.entelecheia.ai/datasets/esg_coverage/ESG_coverage_raw.parquet
+  - uses: pipe4
+    verbose: true
+  - uses: pipe3
+    with:
+      data_file: processed/ESG_coverage_processed.parquet
+    verbose: true
+verbose: true
