@@ -4,8 +4,8 @@
 [![version-image]][release-url]
 [![release-date-image]][release-url]
 [![license-image]][license-url]
-[![codecov][codecov-image]][codecov-url]
 [![jupyter-book-image]][docs-url]
+[![codecov][codecov-image]][codecov-url]
 
 <!-- Links: -->
 
@@ -35,7 +35,7 @@ The Role of Analyst Coverage in Translating ESG Ratings into Stock Performance
 
 This study investigates the role of financial analysts in disseminating Environmental, Social, and Governance (ESG) information to the market and its subsequent impact on stock performance. While the direct causal relationship between ESG ratings and analyst coverage remains unclear, we propose that analysts serve as an informational pathway, translating ESG ratings into stock performance. Using panel data analysis, we examine the relationship between ESG ratings, analyst coverage, and stock performance. Our findings suggest that companies with higher ESG ratings do not necessarily attract more analyst coverage, but the coverage they receive plays a crucial role in shaping investor perceptions and influencing stock performance. This research highlights the importance of financial analysts in the ESG ecosystem and underscores the need for more comprehensive and accurate coverage of ESG topics. Our findings have implications for companies, investors, and policymakers interested in sustainable investing and corporate social responsibility.
 
-## Table of Contents
+**Table of Contents**
 
 ```{tableofcontents}
 
