@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Prepare data &#8212; The Analyst Pathway in ESG</title>
+    <title>Preprocessing Datasets &#8212; The Analyst Pathway in ESG</title>
   
   
   
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../paper/results/index.html">Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../paper/conclusion/index.html">Concluding Remarks</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Supplemental material</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Prepare data</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Preprocessing Datasets</a></li>
 </ul>
 </li>
 </ul>
@@ -433,7 +433,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Prepare data</h1>
+    <h1>Preprocessing Datasets</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -458,8 +458,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="prepare-data">
-<h1>Prepare data<a class="headerlink" href="#prepare-data" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="preprocessing-datasets">
+<h1>Preprocessing Datasets<a class="headerlink" href="#preprocessing-datasets" title="Permalink to this heading">#</a></h1>
 <section id="esg-ratings-dataset">
 <h2>ESG Ratings Dataset<a class="headerlink" href="#esg-ratings-dataset" title="Permalink to this heading">#</a></h2>
 <p><strong>ESG Ratings Dataset Description</strong></p>
@@ -716,22 +716,22 @@ Also, add rating_change column. It is the direction of rating change. <code clas
 <span class="k">if</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">is_colab</span><span class="p">():</span>
     <span class="n">HyFI</span><span class="o">.</span><span class="n">mount_google_drive</span><span class="p">()</span>
 
-<span class="n">ws</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_workspace</span><span class="p">(</span>
+<span class="n">prj</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_project</span><span class="p">(</span>
     <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;esg-coverage&quot;</span><span class="p">,</span>
     <span class="n">task_name</span><span class="o">=</span><span class="s2">&quot;datasets&quot;</span><span class="p">,</span>
     <span class="n">project_root</span><span class="o">=</span><span class="n">HyFI</span><span class="o">.</span><span class="n">dotenv</span><span class="p">()</span><span class="o">.</span><span class="n">DOTENV_DIR</span> <span class="ow">or</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>
-    <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
+    <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
     <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_dir</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_workspace_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_workspace_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_dir:&quot;</span><span class="p">,</span> <span class="n">prj</span><span class="o">.</span><span class="n">project_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_workspace_dir:&quot;</span><span class="p">,</span> <span class="n">prj</span><span class="o">.</span><span class="n">project_workspace_dir</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.notebooks:Google Colab not detected.
-INFO:hyfi.utils.notebooks:Extension autotime not found. Install it first.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/yj.lee/.venvs/esg-coverage/lib/python3.8/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage
@@ -742,48 +742,83 @@ project_workspace_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverag
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># Load your dataframe</span>
-<span class="n">data_dir</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">project_datasets</span>
-<span class="n">ratings_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span><span class="s2">&quot;raw/ESG_ratings_raw.csv&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">)</span>
-
-<span class="c1"># Define a mapping from ratings to numerical scores</span>
-<span class="n">rating_map</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A+&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;B+&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">}</span>
-
-<span class="c1"># Convert rating columns into numerical scores</span>
-<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2021</span><span class="p">):</span>
-    <span class="n">ratings_df</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)]</span> <span class="o">=</span> <span class="n">ratings_df</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">rating_map</span><span class="p">)</span>
-
-<span class="c1"># Melt dataframe to have years as rows instead of columns</span>
-<span class="n">melted_df</span> <span class="o">=</span> <span class="n">ratings_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span>
-    <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;market&quot;</span><span class="p">],</span>
-    <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span>
-    <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;rating_score&quot;</span><span class="p">,</span>
-    <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)],</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="s2">&quot;workflow=datasets&quot;</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">project_root</span> <span class="o">=</span> <span class="n">prj</span><span class="o">.</span><span class="n">project_root</span>
+<span class="n">wf</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">workflow_config</span><span class="p">(</span><span class="o">**</span><span class="n">config</span><span class="p">)</span>
+<span class="n">HyFI</span><span class="o">.</span><span class="n">run_workflow</span><span class="p">(</span><span class="n">wf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Setting project to &lt;class &#39;hyfi.project.ProjectConfig&#39;&gt;
+INFO:hyfi.composer:Setting task_root to /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace/dataset
+INFO:hyfi.pipeline:Applying 6 pipes
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Change directory to /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace/dataset
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Removing project from config
+INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f41d945a790&gt;)
+INFO:hyfi.composer:Removing project from config
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      type     code  name  market  year  rating_score  rating_change rating
+1969     E  A000010  신한은행       0  2011           NaN            NaN    NaN
+9845     E  A000010  신한은행       0  2012           NaN            NaN    NaN
+17721    E  A000010  신한은행       0  2013           NaN            NaN    NaN
+25597    E  A000010  신한은행       0  2014           NaN            NaN    NaN
+33473    E  A000010  신한은행       0  2015           NaN            NaN    NaN
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f41d945a790&gt;)
+INFO:hyfi.composer:Removing project from config
+INFO:hyfi.utils.datasets:Saving dataframe to processed/ESG_ratings_processed.parquet
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      type     code  name  market  year  rating_score  rating_change rating
+1969     E  A000010  신한은행       0  2011           NaN            NaN    NaN
+9845     E  A000010  신한은행       0  2012           NaN            NaN    NaN
+17721    E  A000010  신한은행       0  2013           NaN            NaN    NaN
+25597    E  A000010  신한은행       0  2014           NaN            NaN    NaN
+33473    E  A000010  신한은행       0  2015           NaN            NaN    NaN
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Removing project from config
+INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f41d945a790&gt;)
+INFO:hyfi.composer:Removing project from config
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      code  year type  topic_weight  yearly_change  coverage_change
+0  A000070  2013    E      0.000017            NaN              NaN
+1  A000070  2015    E      0.000025   7.496203e-06              0.0
+2  A000070  2016    E      0.000029   3.520852e-06              0.0
+3  A000070  2017    E      0.000028  -5.451693e-08              0.0
+4  A000080  2011    E      0.001494            NaN              NaN
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f41d945a790&gt;)
+INFO:hyfi.composer:Removing project from config
+INFO:hyfi.utils.datasets:Saving dataframe to processed/ESG_coverage_processed.parquet
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      code  year type  topic_weight  yearly_change  coverage_change
+0  A000070  2013    E      0.000017            NaN              NaN
+1  A000070  2015    E      0.000025   7.496203e-06              0.0
+2  A000070  2016    E      0.000029   3.520852e-06              0.0
+3  A000070  2017    E      0.000028  -5.451693e-08              0.0
+4  A000080  2011    E      0.001494            NaN              NaN
+ Change directory back to /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/book/supplementary
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span>
+    <span class="s2">&quot;processed/ESG_ratings_processed.parquet&quot;</span><span class="p">,</span>
+    <span class="n">data_dir</span><span class="o">=</span><span class="n">prj</span><span class="o">.</span><span class="n">project_workspace_dir</span> <span class="o">/</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-
-<span class="c1"># Convert year to integer</span>
-<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-
-<span class="c1"># Sort by type, code and year</span>
-<span class="n">melted_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Calculate rating change</span>
-<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating_change&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;code&quot;</span><span class="p">])[</span><span class="s2">&quot;rating_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
-
-<span class="c1"># Create &#39;rating&#39; column by mapping numerical scores back to ratings</span>
-<span class="n">reverse_rating_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">rating_map</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">reverse_rating_map</span><span class="p">)</span>
-
-<span class="c1"># Set rating_change values to &#39;1&#39;, &#39;0&#39;, &#39;-1&#39; based on whether it&#39;s positive, zero or negative</span>
-<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating_change&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;rating_change&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
-    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">(</span><span class="mi">0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">))</span>
-<span class="p">)</span>
-
-<span class="n">HyFI</span><span class="o">.</span><span class="n">save_dataframes</span><span class="p">(</span><span class="n">melted_df</span><span class="p">,</span> <span class="s2">&quot;processed/ESG_ratings_raw.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">)</span>
-<span class="n">ratings_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span><span class="s2">&quot;processed/ESG_ratings_raw.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span>
     <span class="n">ratings_df</span><span class="p">[</span><span class="n">ratings_df</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="s2">&quot;A005930&quot;</span><span class="p">]</span>
@@ -795,9 +830,6 @@ project_workspace_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverag
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.datasets:Saving dataframe to /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace/datasets/processed/ESG_ratings_raw.parquet
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|       | type   | code    | name     |   market |   year |   rating_score |   rating_change | rating   |
 |------:|:-------|:--------|:---------|---------:|-------:|---------------:|----------------:|:---------|
 |  2263 | E      | A005930 | 삼성전자 |        1 |   2011 |              6 |             nan | A+       |
@@ -983,66 +1015,9 @@ project_workspace_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverag
 </table>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># load the dataframe</span>
-<span class="n">coverage_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span><span class="s2">&quot;raw/ESG_coverage_raw.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">)</span>
-
-<span class="n">coverage_df</span> <span class="o">=</span> <span class="n">coverage_df</span><span class="p">[</span><span class="n">coverage_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2011</span><span class="p">]</span>
-
-<span class="c1"># Pivot the dataframe</span>
-<span class="n">pivot_df</span> <span class="o">=</span> <span class="n">coverage_df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span>
-    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;topic_num&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;topic_weight&quot;</span>
-<span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-
-<span class="c1"># Fill na values with 0</span>
-<span class="n">pivot_df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Define new categories</span>
-<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic0&quot;</span><span class="p">]</span>
-<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic1&quot;</span><span class="p">]</span>
-<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic2&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic6&quot;</span><span class="p">]</span>
-<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;G2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;topic2&quot;</span><span class="p">]</span>
-<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;ESG&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span>
-<span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;ESG2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">pivot_df</span><span class="p">[</span><span class="s2">&quot;G2&quot;</span><span class="p">]</span>
-
-<span class="c1"># Reset the column name</span>
-<span class="n">pivot_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-
-<span class="c1"># Melt the dataframe to have types as rows instead of columns</span>
-<span class="n">melted_df</span> <span class="o">=</span> <span class="n">pivot_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span>
-    <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">],</span>
-    <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
-    <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;topic_weight&quot;</span><span class="p">,</span>
-    <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;G2&quot;</span><span class="p">,</span> <span class="s2">&quot;ESG&quot;</span><span class="p">,</span> <span class="s2">&quot;ESG2&quot;</span><span class="p">],</span>
-<span class="p">)</span>
-
-<span class="c1"># Calculate yearly changes in &#39;topic_weight&#39; for each company and type</span>
-<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">melted_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">])[</span><span class="s2">&quot;topic_weight&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
-
-<span class="c1"># Calculate standard deviation of the yearly changes for each type</span>
-<span class="n">type_std_devs</span> <span class="o">=</span> <span class="n">melted_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-
-<span class="c1"># Initialize &#39;coverage_change&#39; to NaN where &#39;yearly_change&#39; is NaN</span>
-<span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;coverage_change&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">(),</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Update &#39;coverage_change&#39; based on &#39;yearly_change&#39; relative to the standard deviation for the type</span>
-<span class="k">for</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">type_std_devs</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
-    <span class="n">std_dev</span> <span class="o">=</span> <span class="n">type_std_devs</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span>
-    <span class="n">type_mask</span> <span class="o">=</span> <span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">type</span>
-    <span class="n">melted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
-        <span class="n">type_mask</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">std_dev</span><span class="p">),</span> <span class="s2">&quot;coverage_change&quot;</span>
-    <span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">melted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
-        <span class="n">type_mask</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">melted_df</span><span class="p">[</span><span class="s2">&quot;yearly_change&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">std_dev</span><span class="p">),</span> <span class="s2">&quot;coverage_change&quot;</span>
-    <span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-
-<span class="n">HyFI</span><span class="o">.</span><span class="n">save_dataframes</span><span class="p">(</span>
-    <span class="n">melted_df</span><span class="p">,</span> <span class="s2">&quot;processed/ESG_coverage_processed.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span>
-<span class="p">)</span>
-<span class="n">coverage_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span>
-    <span class="s2">&quot;processed/ESG_coverage_processed.parquet&quot;</span><span class="p">,</span> <span class="n">data_dir</span><span class="o">=</span><span class="n">data_dir</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coverage_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span>
+    <span class="s2">&quot;processed/ESG_coverage_processed.parquet&quot;</span><span class="p">,</span>
+    <span class="n">data_dir</span><span class="o">=</span><span class="n">prj</span><span class="o">.</span><span class="n">project_workspace_dir</span> <span class="o">/</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span>
@@ -1055,9 +1030,6 @@ project_workspace_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverag
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.datasets:Saving dataframe to /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace/datasets/processed/ESG_coverage_processed.parquet
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|     | code    |   year | type   |   topic_weight |   yearly_change |   coverage_change |
 |----:|:--------|-------:|:-------|---------------:|----------------:|------------------:|
 | 412 | A005930 |   2011 | E      |    0.00133423  |   nan           |               nan |
