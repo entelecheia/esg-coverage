@@ -1,0 +1,7 @@
+defaults:
+  - __init__
+
+project_name: esg-coverage
+project_root: ${get_original_cwd:}
+project_description: The Role of Analyst Coverage in Translating ESG Ratings into Stock Performance
+verbose: true
