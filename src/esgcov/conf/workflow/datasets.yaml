@@ -2,6 +2,6 @@ defaults:
   - /project: esgcov
   - /task@task: datasets
 
-config_name: datasets
+_config_name_: datasets
 tasks:
   - task

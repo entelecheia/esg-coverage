@@ -1,8 +1,8 @@
 defaults:
   - __dataframe_external_funcs__
 
-_run_: hyfi.main.HyFI.load_dataframes
-_with_:
+run: hyfi.main.HyFI.load_dataframes
+run_with:
   data_files:
   data_dir:
   filetype:
@@ -10,5 +10,5 @@ _with_:
   concatenate: false
   ignore_index: false
   use_cached: false
-  verbose: false
+  verbose: true
 use_pipe_obj: false
