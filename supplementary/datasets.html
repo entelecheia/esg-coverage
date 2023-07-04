@@ -724,18 +724,19 @@ Also, add rating_change column. It is the direction of rating change. <code clas
     <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_dir:&quot;</span><span class="p">,</span> <span class="n">prj</span><span class="o">.</span><span class="n">project_dir</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_workspace_dir:&quot;</span><span class="p">,</span> <span class="n">prj</span><span class="o">.</span><span class="n">project_workspace_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project directory:&quot;</span><span class="p">,</span> <span class="n">prj</span><span class="o">.</span><span class="n">root_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project workspace directory:&quot;</span><span class="p">,</span> <span class="n">prj</span><span class="o">.</span><span class="n">workspace_dir</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/yj.lee/.venvs/esg-coverage/lib/python3.8/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-  from .autonotebook import tqdm as notebook_tqdm
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Composing `ProjectConfig` class with `__init__` config in `project` group.
+INFO:hyfi.composer:Composing `JobLibConfig` class with `__init__` config in `joblib` group.
+INFO:hyfi.composer:Composing `PathConfig` class with `__init__` config in `path` group.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage
-project_workspace_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project directory: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage
+project workspace directory: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace
 </pre></div>
 </div>
 </div>
@@ -750,17 +751,26 @@ project_workspace_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverag
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Setting project to &lt;class &#39;hyfi.project.ProjectConfig&#39;&gt;
-INFO:hyfi.composer:Setting task_root to /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace/dataset
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Composing `WorkflowConfig` class with `datasets` config in `workflow` group.
+INFO:hyfi.composer:Composing `ProjectConfig` class with `__init__` config in `project` group.
+INFO:hyfi.composer:Composing `JobLibConfig` class with `__init__` config in `joblib` group.
+INFO:hyfi.composer:Composing `PathConfig` class with `__init__` config in `path` group.
+INFO:hyfi.composer:Composing `TaskConfig` class with `datasets` config in `task` group.
+INFO:hyfi.composer:Composing `BatchPathConfig` class with `__batch__` config in `path` group.
 INFO:hyfi.pipeline:Applying 6 pipes
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Change directory to /mnt/nvme1n1p2/home/yj.lee/workspace/projects/esg-coverage/workspace/dataset
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Change directory to workspace/tasks/dataset
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Removing project from config
-INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f41d945a790&gt;)
-INFO:hyfi.composer:Removing project from config
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Composing `TaskConfig` class with `datasets` config in `task` group.
+INFO:hyfi.composer:Composing `BatchPathConfig` class with `__batch__` config in `path` group.
+INFO:hyfi.utils.iolibs:Processing [1] files from [&#39;https://assets.entelecheia.ai/datasets/esg_coverage/ESG_ratings_raw.csv&#39;]
+INFO:hyfi.utils.datasets:Loading data from https://assets.entelecheia.ai/datasets/esg_coverage/ESG_ratings_raw.csv
+INFO:hyfi.utils.datasets: &gt;&gt; elapsed time to load data: 0:00:00.106289
+INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f92f436e0d0&gt;)
+INFO:hyfi.composer:Composing `TaskConfig` class with `datasets` config in `task` group.
+INFO:hyfi.composer:Composing `BatchPathConfig` class with `__batch__` config in `path` group.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      type     code  name  market  year  rating_score  rating_change rating
@@ -771,9 +781,11 @@ INFO:hyfi.composer:Removing project from config
 33473    E  A000010  신한은행       0  2015           NaN            NaN    NaN
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f41d945a790&gt;)
-INFO:hyfi.composer:Removing project from config
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f92f436e0d0&gt;)
+INFO:hyfi.composer:Composing `TaskConfig` class with `datasets` config in `task` group.
+INFO:hyfi.composer:Composing `BatchPathConfig` class with `__batch__` config in `path` group.
 INFO:hyfi.utils.datasets:Saving dataframe to processed/ESG_ratings_processed.parquet
+INFO:hyfi.utils.datasets: &gt;&gt; elapsed time to save data: 0:00:00.090372
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      type     code  name  market  year  rating_score  rating_change rating
@@ -784,9 +796,14 @@ INFO:hyfi.utils.datasets:Saving dataframe to processed/ESG_ratings_processed.par
 33473    E  A000010  신한은행       0  2015           NaN            NaN    NaN
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Removing project from config
-INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f41d945a790&gt;)
-INFO:hyfi.composer:Removing project from config
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Composing `TaskConfig` class with `datasets` config in `task` group.
+INFO:hyfi.composer:Composing `BatchPathConfig` class with `__batch__` config in `path` group.
+INFO:hyfi.utils.iolibs:Processing [1] files from [&#39;https://assets.entelecheia.ai/datasets/esg_coverage/ESG_coverage_raw.parquet&#39;]
+INFO:hyfi.utils.datasets:Loading data from https://assets.entelecheia.ai/datasets/esg_coverage/ESG_coverage_raw.parquet
+INFO:hyfi.utils.datasets: &gt;&gt; elapsed time to load data: 0:00:00.098626
+INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f92f436e0d0&gt;)
+INFO:hyfi.composer:Composing `TaskConfig` class with `datasets` config in `task` group.
+INFO:hyfi.composer:Composing `BatchPathConfig` class with `__batch__` config in `path` group.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      code  year type  topic_weight  yearly_change  coverage_change
@@ -797,9 +814,11 @@ INFO:hyfi.composer:Removing project from config
 4  A000080  2011    E      0.001494            NaN              NaN
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f41d945a790&gt;)
-INFO:hyfi.composer:Removing project from config
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.pipeline:Running a pipe with functools.partial(&lt;function dataframe_external_funcs at 0x7f92f436e0d0&gt;)
+INFO:hyfi.composer:Composing `TaskConfig` class with `datasets` config in `task` group.
+INFO:hyfi.composer:Composing `BatchPathConfig` class with `__batch__` config in `path` group.
 INFO:hyfi.utils.datasets:Saving dataframe to processed/ESG_coverage_processed.parquet
+INFO:hyfi.utils.datasets: &gt;&gt; elapsed time to save data: 0:00:00.010824
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      code  year type  topic_weight  yearly_change  coverage_change
@@ -817,7 +836,7 @@ INFO:hyfi.utils.datasets:Saving dataframe to processed/ESG_coverage_processed.pa
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span>
     <span class="s2">&quot;processed/ESG_ratings_processed.parquet&quot;</span><span class="p">,</span>
-    <span class="n">data_dir</span><span class="o">=</span><span class="n">prj</span><span class="o">.</span><span class="n">project_workspace_dir</span> <span class="o">/</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">data_dir</span><span class="o">=</span><span class="n">prj</span><span class="o">.</span><span class="n">workspace_dir</span> <span class="o">/</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span>
@@ -1017,7 +1036,7 @@ INFO:hyfi.utils.datasets:Saving dataframe to processed/ESG_coverage_processed.pa
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coverage_df</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">load_dataframe</span><span class="p">(</span>
     <span class="s2">&quot;processed/ESG_coverage_processed.parquet&quot;</span><span class="p">,</span>
-    <span class="n">data_dir</span><span class="o">=</span><span class="n">prj</span><span class="o">.</span><span class="n">project_workspace_dir</span> <span class="o">/</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+    <span class="n">data_dir</span><span class="o">=</span><span class="n">prj</span><span class="o">.</span><span class="n">workspace_dir</span> <span class="o">/</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span>
