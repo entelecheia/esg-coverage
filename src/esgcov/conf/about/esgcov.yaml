@@ -1,7 +1,5 @@
-__package_name__: "esgcov"
 name: "The Analyst Pathway in ESG"
 authors: "Young Joon Lee <entelecheia@hotmail.com>"
 description: "The Role of Analyst Coverage in Translating ESG Ratings into Stock Performance"
 homepage: "https://esg-coverage.entelecheia.ai"
 license: "MIT"
-version: "0.3.1"

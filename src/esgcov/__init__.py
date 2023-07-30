@@ -1,16 +1,26 @@
 import os
 
-from hyfi import HyFI, about, global_config
+from hyfi import HyFI
 
 from ._version import __version__
 
-# Read the package name from the current directory
-__package_name__ = os.path.basename(os.path.dirname(__file__))
+# Read the package path from the current directory
+__package_path__ = os.path.dirname(__file__)
 
-# Extract package information
-about.__package_name__ = __package_name__
+# Initialize the global HyFI object
+HyFI.initialize_global_hyfi(
+    package_path=__package_path__,
+    version=__version__,
+    plugins=[],
+)
+
+# Initialize the logger
+HyFI.setLogger()
 
 
 def get_version() -> str:
-    """This is the cli function of the package"""
+    """Get the package version."""
     return __version__
+
+
+__all__ = ["HyFI", "get_version"]
