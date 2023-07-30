@@ -1,8 +1,8 @@
 defaults:
   - __dataframe_external_funcs__
 
-run: hyfi.main.HyFI.load_dataframes
-run_with:
+run:
+  _target_: hyfi.main.HyFI.load_dataframes
   data_files:
   data_dir:
   filetype:
