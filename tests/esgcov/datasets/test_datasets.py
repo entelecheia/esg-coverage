@@ -4,7 +4,7 @@ from esgcov import HyFI
 def test_datasets():
     HyFI.initialize()
     config = HyFI.compose("workflow=datasets")
-    wf = HyFI.workflow_config(**config)
+    wf = HyFI.workflow(**config)
     HyFI.run_workflow(wf)
 
 

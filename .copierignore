@@ -2,3 +2,11 @@
 .tasks-extra.toml
 CHANGELOG.md
 pyproject.toml
+.gitattributes
+book/_toc.yml
+book/index.md
+src/esgcov/__cli__.py
+src/esgcov/_version.py
+src/esgcov/__init__.py
+tests/esgcov/test_cli.py
+.gitignore
