@@ -10,7 +10,8 @@ on:
     paths:
       - "src/**"
       - "tests/**"
-      - '.copier-template/**'
+      - ".copier-template/**"
+      - "pyproject.toml"
 
 jobs:
   build:
