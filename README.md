@@ -1,3 +1,5 @@
+> **Archived 2026-10.** Works with `hyfi<2` (Python 3.12 or older). HyFI 2.0 dropped the 1.x API: https://hyfi.entelecheia.ai/migration/.
+
 # The Analyst Pathway in ESG
 
 [![pypi-image]][pypi-url]
